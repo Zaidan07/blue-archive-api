@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 import { ApiTestAxio } from "./ApiTest.axio";
-import { Wrapper, List } from "./ApiTest.styled";
+import {
+  Wrapper,
+  List,
+  Heading,
+  Image,
+  ImgWrapper,
+  Box,
+} from "./ApiTest.styled";
 import Cards from "./cardComponent/Card";
 export default function ApiTest() {
   const [getData, setGetData] = useState([]);
@@ -18,7 +25,13 @@ export default function ApiTest() {
   }, []);
 
   return (
-    <div>
+    <div style={{ backgroundColor: "aqua" }}>
+      <ImgWrapper>
+        <Box>
+          <Heading>Blue Archive</Heading>
+        </Box>
+        <Image src="/ba.jpg" alt="" />
+      </ImgWrapper>
       <ul>
         <Wrapper>
           {Array.isArray(getData) ? (
@@ -29,8 +42,7 @@ export default function ApiTest() {
                   icon={item.imageSchool}
                   name={item.name}
                   photoUrl={item.photoUrl}
-                  school={item.school
-                  }
+                  school={item.school}
                 />
               </List>
             ))
