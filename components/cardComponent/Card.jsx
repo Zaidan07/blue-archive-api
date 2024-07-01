@@ -1,10 +1,10 @@
-import { Card, Image, Text, ImgSchool } from "./Card.styled";
+import { Card, Image, Text, ImgSchool, H1 } from "./Card.styled";
 
 export default function Cards ({ name, photoUrl, school, icon }) {
   return (
     <Card>
         <ImgSchool src={icon} alt=""/>
-      <h2>{name}</h2>
+      <H1>{name}</H1>
       <Image src={photoUrl} alt={name} />
       <Text><p>{school}</p></Text>
     </Card>
